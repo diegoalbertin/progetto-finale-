@@ -19,10 +19,9 @@ namespace astronaut_adventures
         int[] velocità = new int[5] { 8, 10, 12, 15, 17 };
         int livello;
         int punteggioPartita = 0;
-        PictureBox collisione = new PictureBox();
         public Form3()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         private void keyIsDown(object sender, KeyEventArgs e)
@@ -60,7 +59,7 @@ namespace astronaut_adventures
             }
             label3.Text = "vite:" + 5;
             astronauta.Left = this.ClientSize.Width / 2 - astronauta.Width / 2;
-            punteggioPartita = 0;
+            punteggioPartita = 200;
             livello = 0;
             asteroidiPersi = 0;
             goLeft = false;
@@ -70,6 +69,7 @@ namespace astronaut_adventures
 
         private void mainGameTimerEvent(object sender, EventArgs e)
         {
+            pictureBox5.Visible = false;
             astronauta.Image = Properties.Resources.astronauta;
             label1.Text = "punteggio: "+"\n" + punteggioPartita;
             if (goLeft == true && astronauta.Left > 0)
@@ -136,6 +136,8 @@ namespace astronaut_adventures
             {
                 gameTimer.Stop();
                 pictureBox4.Visible = true;
+                pictureBox5.Visible = true;
+                pictureBox5.Location = astronauta.Location;
                 if (Form2.accessoEseguito==true)
                 {
                     if (punteggioPartita > Form2.punteggio)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\source\\repos\\astronaut adventures\\astronaut adventures\\astronaut adventures.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\progetto-finale-\\astronaut adventures\\astronaut adventures\\astronaut adventures.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\source\\repos\\astronaut adventures\\astronaut adventures\\astronaut adventures.csproj": {
+    "C:\\Users\\Asus\\Desktop\\progetto-finale-\\astronaut adventures\\astronaut adventures\\astronaut adventures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\astronaut adventures\\astronaut adventures\\astronaut adventures.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\progetto-finale-\\astronaut adventures\\astronaut adventures\\astronaut adventures.csproj",
         "projectName": "astronaut adventures",
-        "projectPath": "C:\\Users\\Asus\\source\\repos\\astronaut adventures\\astronaut adventures\\astronaut adventures.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\progetto-finale-\\astronaut adventures\\astronaut adventures\\astronaut adventures.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\source\\repos\\astronaut adventures\\astronaut adventures\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\progetto-finale-\\astronaut adventures\\astronaut adventures\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -64,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

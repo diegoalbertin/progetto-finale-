@@ -103,6 +103,16 @@ namespace astronaut_adventures.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap explosion_png_5a3717af16ad51_1571063915135599830929 {
+            get {
+                object obj = ResourceManager.GetObject("explosion_png_5a3717af16ad51_1571063915135599830929", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap freccia {
             get {
                 object obj = ResourceManager.GetObject("freccia", resourceCulture);

@@ -14,7 +14,7 @@ namespace astronaut_adventures
         public static bool accessoEseguito=false;
         public static string salvataggioID = "";
         public static string lb4;
-        public static int variabileControlloInserimenti;
+        public static bool variabileControlloInserimenti=false;
         public static int rigaGiocatore=0;
         public static int righeFile;
         public static int punteggio=0;
@@ -55,7 +55,7 @@ namespace astronaut_adventures
         {
             controlloInserimenti();
             int controlloUnicitàID = 0;
-            if (variabileControlloInserimenti == 3)
+            if (variabileControlloInserimenti == true)
             {
                 for (int j = 0; j < righeFile; j++)
                 {
@@ -63,7 +63,6 @@ namespace astronaut_adventures
                     {
                         controlloUnicitàID = 1;
                         lb4 = "spiacenti username già esistente";
-                        posizioneEContenutoLB4();
                         textBox1.Clear();
                     }
                 }
@@ -113,9 +112,7 @@ namespace astronaut_adventures
                     rigaGiocatore = 0;
                     accessoEseguito = true;
                     lb4 = "registrazione eseguita, BENVENUTO "+username;
-                    posizioneEContenutoLB4();
                     acquisizioneFile();
-                    partita.BackColor = Color.White;
                 }            
             }
         }
@@ -123,9 +120,8 @@ namespace astronaut_adventures
         private void eseguiAccesso_Click(object sender, EventArgs e)
         {
             controlloInserimenti();
-            posizioneEContenutoLB4();
             int variabileDiControllo = 0;
-            if (variabileControlloInserimenti==3)
+            if (variabileControlloInserimenti==true)
             {
                 for (int j = 0; j < righeFile; j++)
                 {
@@ -136,14 +132,11 @@ namespace astronaut_adventures
                         rigaGiocatore = j;
                         accessoEseguito = true;
                         lb4 = "BENVENUTO " + username;
-                        posizioneEContenutoLB4();
-                        partita.BackColor = Color.White;
                     }
                 }
                 if (variabileDiControllo == 0)
                 {
                     lb4 = "username o password errati";
-                    posizioneEContenutoLB4();
                     textBox1.Clear();
                     textBox2.Clear();
                 }
@@ -162,7 +155,7 @@ namespace astronaut_adventures
             }
             catch (FileNotFoundException)
             {
-                MessageBox.Show("ERRORE: il file che contiene auto nuove in vendita non è stato trovato. Il gioco ne creerà uno per te");
+                MessageBox.Show("ERRORE: il file che contiene gli ID non è stato trovato. Il gioco ne creerà uno per te");
                 File.WriteAllText(@"C:\Users\Asus\source\repos\IDePunteggi", file); 
                 MessageBox.Show("Il file è stato creato con successo.");
             }
@@ -193,23 +186,40 @@ namespace astronaut_adventures
         }
         private void controlloInserimenti()
         {
-            if (username == "")
+            if (username == "" && password == "")
+            {
+                lb4 = "non hai inserito username e password";
+                variabileControlloInserimenti = false;
+                textBox1.Focus();
+            }
+            else if (username == "")
             {
                 lb4="non hai inserito uno username";
-                posizioneEContenutoLB4();
-                variabileControlloInserimenti = 1;
+                variabileControlloInserimenti = false;
                 textBox1.Focus();
             }
             else if (password == "")
             {
                 lb4 = "non hai inserito una password";
-                posizioneEContenutoLB4();
-                variabileControlloInserimenti = 2;
+                variabileControlloInserimenti = false;
                 textBox2.Focus();
             }
             else if (username != "" && password != "")
             {
-                variabileControlloInserimenti = 3;
+                variabileControlloInserimenti = true;
+            }
+        }
+        private void gestioneColori()
+        {
+            if (accessoEseguito == true)
+            {
+                logout.BackColor = Color.Red;
+                partita.BackColor = Color.White;
+            }
+            else if (accessoEseguito == false)
+            {
+                logout.BackColor = Color.Maroon;
+                partita.BackColor = Color.Gray;
             }
         }
 
@@ -220,6 +230,27 @@ namespace astronaut_adventures
                 Form1.form3.Show();
                 this.Hide();
             }
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            if (accessoEseguito == true)
+            {
+                lb4 = "";
+                punteggio = 0;
+                rigaGiocatore = righeFile;
+                username = "";
+                password = "";
+                textBox1.Clear();
+                textBox2.Clear();
+                accessoEseguito = false;
+            }
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            gestioneColori();
+            posizioneEContenutoLB4();
         }
     }
 }

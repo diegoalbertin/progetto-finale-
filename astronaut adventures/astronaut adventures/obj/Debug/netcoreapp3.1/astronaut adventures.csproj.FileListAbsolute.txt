@@ -16,3 +16,21 @@ C:\Users\Asus\source\repos\astronaut adventures\astronaut adventures\obj\Debug\n
 C:\Users\Asus\source\repos\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.pdb
 C:\Users\Asus\source\repos\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.genruntimeconfig.cache
 C:\Users\Asus\source\repos\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut_adventures.Form3.resources
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\bin\Debug\netcoreapp3.1\astronaut adventures.exe
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\bin\Debug\netcoreapp3.1\astronaut adventures.deps.json
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\bin\Debug\netcoreapp3.1\astronaut adventures.runtimeconfig.json
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\bin\Debug\netcoreapp3.1\astronaut adventures.runtimeconfig.dev.json
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\bin\Debug\netcoreapp3.1\astronaut adventures.dll
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\bin\Debug\netcoreapp3.1\astronaut adventures.pdb
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut_adventures.Form1.resources
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut_adventures.Form2.resources
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut_adventures.Form3.resources
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut_adventures.Properties.Resources.resources
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.AssemblyInfo.cs
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.dll
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.pdb
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.genruntimeconfig.cache

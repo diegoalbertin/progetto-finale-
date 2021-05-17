@@ -29,6 +29,7 @@ namespace astronaut_adventures
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@ namespace astronaut_adventures
             this.eseguiAccesso = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.partita = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.Button();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -138,14 +141,31 @@ namespace astronaut_adventures
             // 
             // partita
             // 
-            this.partita.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.partita.Location = new System.Drawing.Point(320, 340);
+            this.partita.BackColor = System.Drawing.Color.Gray;
+            this.partita.Location = new System.Drawing.Point(411, 340);
             this.partita.Name = "partita";
             this.partita.Size = new System.Drawing.Size(162, 29);
             this.partita.TabIndex = 14;
             this.partita.Text = "vai al gioco";
             this.partita.UseVisualStyleBackColor = false;
             this.partita.Click += new System.EventHandler(this.partita_Click);
+            // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Maroon;
+            this.logout.Location = new System.Drawing.Point(230, 340);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(162, 29);
+            this.logout.TabIndex = 15;
+            this.logout.Text = "logout";
+            this.logout.UseVisualStyleBackColor = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 20;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Form2
             // 
@@ -154,6 +174,7 @@ namespace astronaut_adventures
             this.BackgroundImage = global::astronaut_adventures.Properties.Resources.sfondo_form2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.partita);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.eseguiAccesso);
@@ -187,5 +208,7 @@ namespace astronaut_adventures
         private System.Windows.Forms.Button eseguiAccesso;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button partita;
+        private System.Windows.Forms.Button logout;
+        private System.Windows.Forms.Timer timer;
     }
 }
