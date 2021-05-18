@@ -17,6 +17,7 @@ namespace astronaut_adventures
         public static Form1 form1 = new Form1();
         public static Form2 form2 = new Form2();
         public static Form3 form3 = new Form3();
+        public static Form4 form4 = new Form4();
 
         public Form1()
         {
@@ -31,7 +32,8 @@ namespace astronaut_adventures
         }
         private void aiutobtn_Click(object sender, EventArgs e)
         {
-
+            form4.Show();
+            this.Hide();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

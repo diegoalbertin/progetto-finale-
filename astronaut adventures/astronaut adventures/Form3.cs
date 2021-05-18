@@ -202,10 +202,23 @@ namespace astronaut_adventures
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1.form1.Show();
+            this.Hide();
+        }
+
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             restart();
             pictureBox4.Visible = false;
+            pictureBox6.Visible = false;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Form1.form1.Show();
+            this.Hide();
         }
     }
 }

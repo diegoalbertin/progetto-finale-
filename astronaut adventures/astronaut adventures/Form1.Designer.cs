@@ -93,6 +93,8 @@ namespace astronaut_adventures
             this.Controls.Add(this.partitaVelocebtn);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(816, 488);
+            this.MinimumSize = new System.Drawing.Size(816, 488);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);

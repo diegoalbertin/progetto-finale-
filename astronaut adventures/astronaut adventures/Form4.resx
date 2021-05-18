@@ -1,0 +1,79 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>astronaut adventures è un gioco ambientato nello spazio profondo in cui, nelle vesti di un astronauta, dovrai raccogliere gli asteroidi
+ che, cadendo dal cielo, rischiano di distruggere il pianeta su cui ti trovi.
+FUNZIONAMENTO DEL GIOCO
+-potrai muoverti lateralmente utilizzando i tasti freccia destra e sinistra;
+-gli asteroidi compariranno in posizioni casuali nell'ambiente di gioco;
+-gli asteroidi aumenterranno di velocià in base al punteggio che ottieni durante la partita(0-99, 10-199, 200-299, 300-399,400+);
+-si hanno a disposizione 5 vite, ogni asteroide perso ne toglie una, queste vengono ripristinate al superamento di ogni livello;
+-ogni asteroide raccolto vale 10 punti.
+FUNZIONAMENTO ACCESSO-REGISTRAZIONE
+tramite la pagina dedicata potrai:
+-registrarti se non l'hai fatto in precedenza, sarà necessario scegliere un nome utente(username) univoco e una password a tua scelta, queste 
+credenziali non saranno modificabili in seguito;
+-accedere se hai effettuato la registrazione, basterà utilizzare le stesse credenziali;
+-una volta effettuato l'accesso, se riuscirai a battere il tuo punteggio record, questo verrà salvato automaticamente.
+FUNZIONAMENTO PARTITA VELOCE
+-partita veloce fornisce la possibilità di giocare a astronaut adventures senza effettuare registrazione o accesso, 
+perciò IL PUNTEGGIO NON SARÀ SALVATO.</value>
+  </data>
+</root>

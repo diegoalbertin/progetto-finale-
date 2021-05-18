@@ -34,3 +34,4 @@ C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures
 C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.dll
 C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.pdb
 C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut adventures.genruntimeconfig.cache
+C:\Users\Asus\Desktop\progetto-finale-\astronaut adventures\astronaut adventures\obj\Debug\netcoreapp3.1\astronaut_adventures.Form4.resources
