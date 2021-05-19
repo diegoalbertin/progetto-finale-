@@ -114,7 +114,6 @@ namespace astronaut_adventures
             this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "punteggio: ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -155,18 +154,26 @@ namespace astronaut_adventures
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Black;
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Image = global::astronaut_adventures.Properties.Resources.play_button;
             this.pictureBox4.Location = new System.Drawing.Point(219, 219);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(99, 59);
+            this.pictureBox4.Size = new System.Drawing.Size(100, 80);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Image = global::astronaut_adventures.Properties.Resources.freccia;
             this.pictureBox6.Location = new System.Drawing.Point(374, 218);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(91, 68);
+            this.pictureBox6.Size = new System.Drawing.Size(100, 80);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 14;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
