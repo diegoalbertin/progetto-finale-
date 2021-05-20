@@ -105,7 +105,7 @@ namespace astronaut_adventures
                         {
                             salvataggioID = salvataggioID + arrayDiSalvataggio[i, j];
                         }
-                        salvataggioID = salvataggioID + "\n";//dopo ogni ID e punteggio va a capo per salvare il successivo
+                        //salvataggioID = salvataggioID + "\n";//dopo ogni ID e punteggio va a capo per salvare il successivo
                     }
                     File.WriteAllText(@"C:\Users\Asus\Desktop\IDePunteggi", salvataggioID);//esegue la scrittura su file
                     salvataggioID = "";//svuota la stringa salvataggioID
@@ -161,13 +161,13 @@ namespace astronaut_adventures
             }
             catch (IOException)//Se si verifica questo errore, cioè errore di lettura, esegue le operazioni seguenti.
             {
-                MessageBox.Show("ERRORE: si è verificato un errore durante la lettura dei file. Premi un tasto qualsiasi per chiudere il programma e prova ad aprilo di nuovo.");
-                Console.ReadKey();
+                MessageBox.Show("ERRORE: si è verificato un errore durante la lettura dei file. Prova ad aprilo di nuovo.");
                 Environment.Exit(0);
             }
             string[] elementiFileDaOrdinare = file.Split(carattereDivisore);//gli elementi presenti su file vengono inseriti nell'array 
             righeFile = Convert.ToInt32(elementiFileDaOrdinare[0]);//la variabile righefile assume il valore del primo elemento dell'array elementiFileDaOrdinare(infatti questa cella contiene il numero delle righe)
             elementiFileOrdinati = new string[righeFile, 3];//viene modificata la lunghezza dell'array
+            
             int n1 = 1; //Si inizializza la variabile necessaria per l'estrazione del contenuto dell'array monodimensionale elementi.
             for (int i = 0; i < righeFile; i++) //Inserisce nell'array multidimensionale elementiFileOrdinati il contenuto dell'array monodimensionale elementiFileDaOrdinare, 
             {                                   

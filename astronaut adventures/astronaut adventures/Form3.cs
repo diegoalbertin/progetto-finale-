@@ -70,10 +70,7 @@ namespace astronaut_adventures
 
         private void mainGameTimerEvent(object sender, EventArgs e)//timer
         {
-            if(astronauta.Image == Properties.Resources.collisione)//se l'immagine del personaggio è quella assegnatagli in caso venga perso un asteroide
-            {                                                       //gli riassegna quella predefinita dopo un ciclo di clock in modo che non resti visualizzata la precedente per tutta la partita
-                astronauta.Image = Properties.Resources.astronauta;
-            }
+            astronauta.Image = Properties.Resources.astronauta;
             label1.Text = "punteggio: "+"\n" + punteggioPartita;//viene inserito nella label il punteggio momentaneo del giocatore
             if (goLeft == true && astronauta.Left > 0)//cicli if che permettono il movimento del personaggio
             {
@@ -147,6 +144,8 @@ namespace astronaut_adventures
                     if (punteggioPartita > Form2.punteggio)//se il punteggio della partita è maggiore del punteggio precedentemente salvato su file
                     {
                         Form2.elementiFileOrdinati[Form2.rigaGiocatore, 2] = Convert.ToString(punteggioPartita);//viene scambiato il punteggio nell'array ordinato utilizzato per il salvataggio
+                        Form2.punteggio = punteggioPartita;
+                        ordinamentoID_Punteggi();
                         salvataggio();//viene chiamata la funzione salvatggio
                     }
                 }
@@ -190,7 +189,7 @@ namespace astronaut_adventures
                 {
                     salvataggio = salvataggio + arrayDiSalvataggio[i, j];
                 }
-                salvataggio = salvataggio + "\n";//dopo il salvataggio di un ID e punteggio il programma va a capo per salvare il successivo
+                //salvataggio = salvataggio + "\n";//dopo il salvataggio di un ID e punteggio il programma va a capo per salvare il successivo
             }
             File.WriteAllText(@"C:\Users\Asus\Desktop\IDePunteggi", salvataggio);//viene salvato il tutto su file
             salvataggio = "";//viene svuotata la variabile stringa
@@ -212,6 +211,41 @@ namespace astronaut_adventures
         {
             Form1.form1.Show();//viene mostrato il form1 
             this.Hide();//il form corrente viene nascosto
+        }
+        private void ordinamentoID_Punteggi()
+        {
+            for (int i = 0; i < Form2.righeFile - 1; i++)
+            {
+                // Trova il minimo nel subarray da ordinare
+                int indice_min = i;
+                int primoElementoComparazione;
+                int secondoElementoComparazione;
+                for (int j = i + 1; j < Form2.righeFile; j++)
+                {
+                    primoElementoComparazione = Convert.ToInt32(Form2.elementiFileOrdinati[j, 2]);
+                    secondoElementoComparazione = Convert.ToInt32(Form2.elementiFileOrdinati[indice_min, 2]);
+                    // Confronto per trovare un nuovo minimo
+                    if (primoElementoComparazione< secondoElementoComparazione)
+                    {
+                        indice_min = j; // Salvo l'indice del nuovo minimo
+                    }
+                }
+
+                // Scambia il minimo trovato con il primo elemento
+                swap( indice_min, i);
+            }
+        }
+        private void swap(int a, int b)
+        {
+            string tempPunteggio = Form2.elementiFileOrdinati[a,2];
+            Form2.elementiFileOrdinati[a, 2] = Form2.elementiFileOrdinati[b, 2];
+            Form2.elementiFileOrdinati[b, 2] = tempPunteggio;
+            string tempPassword = Form2.elementiFileOrdinati[a, 1];
+            Form2.elementiFileOrdinati[a, 1] = Form2.elementiFileOrdinati[b, 1];
+            Form2.elementiFileOrdinati[b, 1] = tempPassword;
+            string tempUsername = Form2.elementiFileOrdinati[a, 0];
+            Form2.elementiFileOrdinati[a, 0] = Form2.elementiFileOrdinati[b, 0];
+            Form2.elementiFileOrdinati[b, 0] = tempUsername;
         }
     }
 }
