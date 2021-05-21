@@ -23,6 +23,7 @@ namespace astronaut_adventures
         static string file = "0:::";//stringa utilizzata al primo salvataggio su file
         static string username="";
         static string password = "";
+        public static bool letturaFileEseguita=false;
         public Form2()
         {
             InitializeComponent();
@@ -167,7 +168,6 @@ namespace astronaut_adventures
             string[] elementiFileDaOrdinare = file.Split(carattereDivisore);//gli elementi presenti su file vengono inseriti nell'array 
             righeFile = Convert.ToInt32(elementiFileDaOrdinare[0]);//la variabile righefile assume il valore del primo elemento dell'array elementiFileDaOrdinare(infatti questa cella contiene il numero delle righe)
             elementiFileOrdinati = new string[righeFile, 3];//viene modificata la lunghezza dell'array
-            
             int n1 = 1; //Si inizializza la variabile necessaria per l'estrazione del contenuto dell'array monodimensionale elementi.
             for (int i = 0; i < righeFile; i++) //Inserisce nell'array multidimensionale elementiFileOrdinati il contenuto dell'array monodimensionale elementiFileDaOrdinare, 
             {                                   
@@ -177,6 +177,7 @@ namespace astronaut_adventures
                     n1++;
                 }
             }
+            letturaFileEseguita = true;
         }
         public void posizioneEContenutoLB4()//funzione che riposiziona label4 in base alla lunghezza del testo, in modo che risulti sempre centrata
         {

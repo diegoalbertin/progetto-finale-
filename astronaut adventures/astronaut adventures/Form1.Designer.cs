@@ -33,6 +33,9 @@ namespace astronaut_adventures
             this.aiutobtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.accedioregistrati = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mostraClassifica = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // partitaVelocebtn
@@ -80,6 +83,29 @@ namespace astronaut_adventures
             this.accedioregistrati.UseVisualStyleBackColor = true;
             this.accedioregistrati.Click += new System.EventHandler(this.accedioregistrati_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 210);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(314, 116);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // mostraClassifica
+            // 
+            this.mostraClassifica.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mostraClassifica.Location = new System.Drawing.Point(332, 370);
+            this.mostraClassifica.Name = "mostraClassifica";
+            this.mostraClassifica.Size = new System.Drawing.Size(178, 23);
+            this.mostraClassifica.TabIndex = 3;
+            this.mostraClassifica.Text = "mostra classifica";
+            this.mostraClassifica.UseVisualStyleBackColor = true;
+            this.mostraClassifica.Click += new System.EventHandler(this.mostraClassifica_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -87,6 +113,8 @@ namespace astronaut_adventures
             this.BackgroundImage = global::astronaut_adventures.Properties.Resources.sfondo_home;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mostraClassifica);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.accedioregistrati);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.aiutobtn);
@@ -98,7 +126,9 @@ namespace astronaut_adventures
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,6 +140,8 @@ namespace astronaut_adventures
         private System.Windows.Forms.Button aiutobtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button accedioregistrati;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button mostraClassifica;
     }
 }
 

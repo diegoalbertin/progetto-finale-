@@ -19,6 +19,7 @@ namespace astronaut_adventures
         int livello;
         int punteggioPartita = 0;
         int[] velocità = new int[5] { 8, 10, 12, 15, 17 };// array contenente le varie velocità degli asteroidi
+        int variabileControlloAggiornamentoLivello = 0;
         public Form3()
         {
             InitializeComponent();           
@@ -71,6 +72,7 @@ namespace astronaut_adventures
         private void mainGameTimerEvent(object sender, EventArgs e)//timer
         {
             astronauta.Image = Properties.Resources.astronauta;
+            label3.Text = "vite:" + (5 - asteroidiPersi);//viene visualizzato nell'apposita label il numero di vite rimanenti 
             label1.Text = "punteggio: "+"\n" + punteggioPartita;//viene inserito nella label il punteggio momentaneo del giocatore
             if (goLeft == true && astronauta.Left > 0)//cicli if che permettono il movimento del personaggio
             {
@@ -90,7 +92,6 @@ namespace astronaut_adventures
                     {                                               //quindi vengono mancati dall'utente
                         astronauta.Image = Properties.Resources.collisione;//al personaggio viene assegnata l'immagine collisione
                         asteroidiPersi += 1;//viene incrementato il numero di asteroidi persi
-                        label3.Text = "vite:" + (5 - asteroidiPersi);//viene visualizzato nell'apposita label il numero di vite rimanenti 
                         x.Top = randY.Next(80, 300) * -1;//l'asteroide viene riposizionato
                         x.Left = randY.Next(5, this.ClientSize.Width - x.Width);
                     }
@@ -102,34 +103,34 @@ namespace astronaut_adventures
                     }
                 }
             }           
-            int variabileControlloAggiornamentoLivello = 0;
             if (punteggioPartita < 100)//cicli if per la scelta del livello in base al punteggio del giocatore e per l'eventuale ripristino delle vite
             {
                 livello = 0;
+                variabileControlloAggiornamentoLivello = 1;
             }
-            else if (punteggioPartita >= 100 && punteggioPartita < 200 && variabileControlloAggiornamentoLivello == 0)
+            else if (punteggioPartita >= 100 && punteggioPartita < 200 && variabileControlloAggiornamentoLivello == 1)
             {
                 livello = 1;
                 asteroidiPersi = 0;
-                variabileControlloAggiornamentoLivello = 1;
+                variabileControlloAggiornamentoLivello = 2;
             }
-            else if (punteggioPartita >= 200 && punteggioPartita < 300 && variabileControlloAggiornamentoLivello == 1)
+            else if (punteggioPartita >= 200 && punteggioPartita < 300 && variabileControlloAggiornamentoLivello == 2)
             {
                 livello = 2;
                 asteroidiPersi = 0;
-                variabileControlloAggiornamentoLivello = 2;
+                variabileControlloAggiornamentoLivello = 3;
             }
-            else if (punteggioPartita >= 300 && punteggioPartita < 400 && variabileControlloAggiornamentoLivello == 2)
+            else if (punteggioPartita >= 300 && punteggioPartita < 400 && variabileControlloAggiornamentoLivello == 3)
             {
                 livello = 3;
                 asteroidiPersi = 0;
-                variabileControlloAggiornamentoLivello = 3;
+                variabileControlloAggiornamentoLivello = 4;
             }
-            else if (punteggioPartita >= 400 && variabileControlloAggiornamentoLivello == 3)
+            else if (punteggioPartita >= 400 && variabileControlloAggiornamentoLivello == 4)
             {
                 livello = 4;
                 asteroidiPersi = 0;
-                variabileControlloAggiornamentoLivello = 4;
+                variabileControlloAggiornamentoLivello = 5;
             }
 
             if (asteroidiPersi == 5)//ciclo if per il caso in cui l'utente manchi 5 asteroide, quindi raggiunga le 0 vite
