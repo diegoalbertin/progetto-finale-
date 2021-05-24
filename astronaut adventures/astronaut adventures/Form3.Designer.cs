@@ -117,17 +117,16 @@ namespace astronaut_adventures
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(156, 9);
-            this.label2.MaximumSize = new System.Drawing.Size(359, 36);
-            this.label2.MinimumSize = new System.Drawing.Size(359, 36);
+            this.label2.MaximumSize = new System.Drawing.Size(375, 36);
+            this.label2.MinimumSize = new System.Drawing.Size(375, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(359, 36);
+            this.label2.Size = new System.Drawing.Size(375, 36);
             this.label2.TabIndex = 6;
-            this.label2.Text = "atronaut adventures";
+            this.label2.Text = "astronaut adventures";
             // 
             // label3
             // 

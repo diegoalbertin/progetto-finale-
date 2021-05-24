@@ -72,6 +72,7 @@ namespace astronaut_adventures
                     dataGridView1.Columns[0].HeaderText = "posizione";
                     dataGridView1.Columns[1].HeaderText = "username";
                     dataGridView1.Columns[2].HeaderText = "punteggio";
+                    mostraClassifica.Text = "nascondi classifica";
                     if (Form2.righeFile >= 3)//vengono create le nuove righe contenenti i dati
                     {
                         dataGridView1.Rows.Add("1°", Form2.elementiFileOrdinati[Form2.righeFile - 1, 0], Form2.elementiFileOrdinati[Form2.righeFile - 1, 2]);
@@ -96,6 +97,7 @@ namespace astronaut_adventures
                 {
                     dataGridView1.Visible = false;
                     visibilitàDataGridView = false;
+                    mostraClassifica.Text = "mostra classifica";
                 }
             }
             else

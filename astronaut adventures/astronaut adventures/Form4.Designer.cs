@@ -55,9 +55,9 @@ namespace astronaut_adventures
             this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(227, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(359, 36);
+            this.label2.Size = new System.Drawing.Size(375, 36);
             this.label2.TabIndex = 7;
-            this.label2.Text = "atronaut adventures";
+            this.label2.Text = "astronaut adventures";
             // 
             // button1
             // 
