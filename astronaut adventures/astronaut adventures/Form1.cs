@@ -53,6 +53,7 @@ namespace astronaut_adventures
             partitaVelocebtn.Left = (this.Width / 2) - (partitaVelocebtn.Width / 2);
             accedioregistrati.Left = (this.Width / 2) - (accedioregistrati.Width / 2);
             aiutobtn.Left = (this.Width / 2) - (aiutobtn.Width / 2);
+            mostraClassifica.Left = (this.Width / 2) - (mostraClassifica.Width / 2);
         }
 
         private void Form1_Load(object sender, EventArgs e)

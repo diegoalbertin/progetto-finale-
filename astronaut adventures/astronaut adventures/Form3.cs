@@ -72,7 +72,6 @@ namespace astronaut_adventures
         private void mainGameTimerEvent(object sender, EventArgs e)//timer
         {
             astronauta.Image = Properties.Resources.astronauta;
-            label3.Text = "vite:" + (5 - asteroidiPersi);//viene visualizzato nell'apposita label il numero di vite rimanenti 
             label1.Text = "punteggio: "+"\n" + punteggioPartita;//viene inserito nella label il punteggio momentaneo del giocatore
             if (goLeft == true && astronauta.Left > 0)//cicli if che permettono il movimento del personaggio
             {
@@ -102,7 +101,9 @@ namespace astronaut_adventures
                         x.Left = randY.Next(5, this.ClientSize.Width - x.Width);
                     }
                 }
-            }           
+            }
+            label3.Text = "vite:" + (5 - asteroidiPersi);//viene visualizzato nell'apposita label il numero di vite rimanenti 
+
             if (punteggioPartita < 100)//cicli if per la scelta del livello in base al punteggio del giocatore e per l'eventuale ripristino delle vite
             {
                 livello = 0;

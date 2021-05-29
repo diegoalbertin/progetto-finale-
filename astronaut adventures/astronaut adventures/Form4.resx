@@ -74,6 +74,9 @@ credenziali non saranno modificabili in seguito;
 -una volta effettuato l'accesso, se riuscirai a battere il tuo punteggio record, questo verrà salvato automaticamente.
 FUNZIONAMENTO PARTITA VELOCE
 -partita veloce fornisce la possibilità di giocare a astronaut adventures senza effettuare registrazione o accesso, 
-perciò IL PUNTEGGIO NON SARÀ SALVATO.</value>
+perciò IL PUNTEGGIO NON SARÀ SALVATO.
+FUNZIONAMENTO MOSTRA CLASSIFICA
+-questo pulsante permette di visualizzare sullo schermo una mini classifica contenente i 3 giocatori con i punteggi migliori.
+</value>
   </data>
 </root>

@@ -43,7 +43,7 @@ namespace astronaut_adventures
             this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(12, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(785, 340);
+            this.label1.Size = new System.Drawing.Size(785, 380);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             // 
