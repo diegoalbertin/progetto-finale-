@@ -41,6 +41,7 @@ namespace astronaut_adventures
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.asteroideInfuocato = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.astronauta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -48,6 +49,7 @@ namespace astronaut_adventures
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asteroideInfuocato)).BeginInit();
             this.SuspendLayout();
             // 
             // astronauta
@@ -177,6 +179,18 @@ namespace astronaut_adventures
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
+            // asteroideInfuocato
+            // 
+            this.asteroideInfuocato.BackColor = System.Drawing.Color.Transparent;
+            this.asteroideInfuocato.Image = global::astronaut_adventures.Properties.Resources.asteroide_infuocato;
+            this.asteroideInfuocato.Location = new System.Drawing.Point(187, 48);
+            this.asteroideInfuocato.Name = "asteroideInfuocato";
+            this.asteroideInfuocato.Size = new System.Drawing.Size(106, 105);
+            this.asteroideInfuocato.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.asteroideInfuocato.TabIndex = 15;
+            this.asteroideInfuocato.TabStop = false;
+            this.asteroideInfuocato.Tag = "infuocato";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -184,6 +198,7 @@ namespace astronaut_adventures
             this.BackgroundImage = global::astronaut_adventures.Properties.Resources.backimage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(646, 568);
+            this.Controls.Add(this.asteroideInfuocato);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
@@ -208,6 +223,7 @@ namespace astronaut_adventures
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asteroideInfuocato)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +242,6 @@ namespace astronaut_adventures
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox asteroideInfuocato;
     }
 }

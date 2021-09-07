@@ -73,6 +73,16 @@ namespace astronaut_adventures.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap asteroide_infuocato {
+            get {
+                object obj = ResourceManager.GetObject("asteroide_infuocato", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap astronauta {
             get {
                 object obj = ResourceManager.GetObject("astronauta", resourceCulture);

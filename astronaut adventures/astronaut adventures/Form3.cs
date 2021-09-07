@@ -52,12 +52,13 @@ namespace astronaut_adventures
         {
             foreach (Control x in this.Controls)//x è il tag dato agli asteroidi, tramite questi due cicli il programma va a modificare le coordinate solo di questi
             {
-                if (x is PictureBox && (string)x.Tag == "asteroide")
+                if (x is PictureBox && (string)x.Tag == "asteroide"|| x is PictureBox && (string)x.Tag == "infuocato")
                 {
                     x.Top = randY.Next(80, 300) * -1;
-                    x.Left = randY.Next(5, this.ClientSize.Width - x.Width);
+                    x.Left = randX.Next(5, this.ClientSize.Width - x.Width);
                 }
             }
+            
             label3.Text = "vite:" + 5;//5 è il numero massimo di vite
             astronauta.Left = this.ClientSize.Width / 2 - astronauta.Width / 2;//posiziona il personaggio astronauta a metà del form
             punteggioPartita = 0;//all'inizio della partita le varie variabili valgono 0
@@ -92,13 +93,30 @@ namespace astronaut_adventures
                         astronauta.Image = Properties.Resources.collisione;//al personaggio viene assegnata l'immagine collisione
                         asteroidiPersi += 1;//viene incrementato il numero di asteroidi persi
                         x.Top = randY.Next(80, 300) * -1;//l'asteroide viene riposizionato
-                        x.Left = randY.Next(5, this.ClientSize.Width - x.Width);
+                        x.Left = randX.Next(5, this.ClientSize.Width - x.Width);
                     }
                     if (astronauta.Bounds.IntersectsWith(x.Bounds))//ciclo if nel caso in cui il giocatore "prende" un asteroide
                     {
                         punteggioPartita += 10;//viene aumentato il punteggio
                         x.Top = randY.Next(80, 300) * -1;//l'asteroide viene riposizionato
-                        x.Left = randY.Next(5, this.ClientSize.Width - x.Width);
+                        x.Left = randX.Next(5, this.ClientSize.Width - x.Width);
+                    }
+                }
+                else if(x is PictureBox && (string)x.Tag == "infuocato")
+                {
+                    x.Top += velocità[livello];
+                    if (x.Top + x.Height > this.ClientSize.Height)//ciclo if per il caso in cui gli astoridi si trovino più in basso della fine dello schermo
+                    {                                               //quindi vengono mancati dall'utente
+                        x.Top = randY.Next(80, 300) * -1;//l'asteroide viene riposizionato
+                        x.Left = randX.Next(5, this.ClientSize.Width - x.Width);
+                    }
+                    if (astronauta.Bounds.IntersectsWith(x.Bounds))//ciclo if nel caso in cui il giocatore "prende" un asteroide infuocato
+                    {
+                        astronauta.Image = Properties.Resources.collisione;//al personaggio viene assegnata l'immagine collisione
+                        asteroidiPersi += 1;//viene incrementato il numero di asteroidi persi
+                        punteggioPartita -= 10;//viene diminuito il punteggio
+                        x.Top = randY.Next(80, 300) * -1;//l'asteroide viene riposizionato
+                        x.Left = randX.Next(5, this.ClientSize.Width - x.Width);
                     }
                 }
             }
